@@ -1,0 +1,32 @@
+@use "../1-base/variaveis";
+@use "../1-base/responsividade";
+@use "layouts-mixins";
+
+.detalhes {
+    @include layouts-mixins.container-layout;
+
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    @include responsividade.dispositivo(xp) {
+        max-width: 90%;
+    }
+    h2 {
+        @include layouts-mixins.fonte(variaveis.$preto, 35px, 28px, bold);
+        font-family: "Raleway", sans-serif;
+        margin-bottom: 30px;
+        @include responsividade.dispositivo(xp) {
+            font-size: 30px;
+        }
+    }
+    p {
+        @include layouts-mixins.fonte(variaveis.$preto, 18px, 28px);
+        margin-bottom: 30px;
+    }
+    ul {
+        margin-bottom: 40px;
+        li {
+            @include layouts-mixins.fonte(variaveis.$preto, 18px, 28px);
+        }
+    }
+}

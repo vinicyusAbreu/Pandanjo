@@ -1,0 +1,10 @@
+@use "../1-base/responsividade";
+.bg-section {
+    width: 100%;
+    height: 420px;
+    background: transparent url("../img/bg-grao.png") 0% 0% no-repeat padding-box;
+
+    @include responsividade.dispositivo(xp) {
+        background: transparent url("../img/bg-mobile.png") 0% 0% no-repeat padding-box;
+    }
+}

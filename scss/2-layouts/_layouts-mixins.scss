@@ -1,0 +1,36 @@
+@use "../1-base/variaveis";
+@use "../1-base/responsividade";
+@mixin container-layout {
+    width: variaveis.$container-largura;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include responsividade.dispositivo(xp) {
+        max-width: 100%;
+    }
+}
+
+@mixin box($padding) {
+    background-color: variaveis.$branco;
+    border-radius: 5px;
+    padding: $padding;
+}
+
+@mixin fonte($color, $size, $lineHeight, $weight: 500) {
+    color: $color;
+    font-size: $size;
+    line-height: $lineHeight;
+    font-weight: $weight;
+}
+@mixin arredondado($padding_Y, $padding_X) {
+    border-radius: 50px;
+    padding: $padding_Y $padding_X;
+}
+
+@mixin background-gradient {
+    background: transparent linear-gradient(270deg, variaveis.$verde-claro 0%, variaveis.$verde 100%);
+    color: variaveis.$branco;
+}

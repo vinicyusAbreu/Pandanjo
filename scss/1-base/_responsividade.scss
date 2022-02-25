@@ -1,0 +1,23 @@
+$dispositivo-grande: 992px;
+$dispositivo-medio: 760px;
+$dispositivo-pequeno: 480px;
+
+@mixin dispositivo($tamanho) {
+    @if $tamanho == g {
+        @media screen and (min-width: #{$dispositivo-grande}) and (max-width: 1200px) {
+            @content;
+        }
+    } @else if $tamanho == m {
+        @media screen and (min-width: #{$dispositivo-medio}) and (max-width: #{$dispositivo-grande - 1}) {
+            @content;
+        }
+    } @else if $tamanho == p {
+        @media screen and (max-width: #{$dispositivo-medio - 1}) {
+            @content;
+        }
+    } @else if $tamanho == xp {
+        @media screen and (max-width: #{$dispositivo-pequeno - 1}) {
+            @content;
+        }
+    }
+}

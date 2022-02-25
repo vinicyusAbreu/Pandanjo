@@ -1,0 +1,61 @@
+@use "../1-base/variaveis";
+@use "../1-base/responsividade";
+@use "../2-layouts/layouts-mixins";
+
+.btn {
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-grande {
+    width: 271px;
+    height: 50px;
+    @include layouts-mixins.background-gradient;
+    @include responsividade.dispositivo(xp) {
+        flex: 1;
+    }
+}
+.btn-busca {
+    @include layouts-mixins.background-gradient;
+    @include layouts-mixins.fonte(variaveis.$branco, 16px, 28px, bold);
+    width: 100%;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+.flickity-button {
+    svg {
+        display: none;
+    }
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+}
+
+.flickity-prev-next-button.previous {
+    left: -52px !important;
+    background-image: url("../img/arrow-left.png") !important;
+    @include responsividade.dispositivo(g) {
+        left: 10px !important;
+    }
+    @include responsividade.dispositivo(m) {
+        left: 10px !important;
+    }
+}
+.flickity-prev-next-button.next {
+    right: -52px !important;
+    background-image: url("../img/arrow-right.svg") !important;
+    @include responsividade.dispositivo(g) {
+        right: 10px !important;
+    }
+    @include responsividade.dispositivo(m) {
+        right: 10px !important;
+    }
+}

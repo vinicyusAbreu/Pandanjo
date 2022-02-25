@@ -1,0 +1,23 @@
+@use "variaveis";
+@use "responsividade";
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+    background-color: variaveis.$bg-cinza;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+main {
+    width: 100%;
+    margin-top: 60px;
+
+    @include responsividade.dispositivo(xp) {
+        margin-top: 0;
+    }
+}

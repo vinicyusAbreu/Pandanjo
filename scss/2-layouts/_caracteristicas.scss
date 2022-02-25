@@ -1,0 +1,58 @@
+@use "../1-base/variaveis";
+@use "../1-base/responsividade";
+@use "layouts-mixins";
+
+.caracteristicas {
+    @include layouts-mixins.background-gradient;
+
+    article {
+        @include layouts-mixins.container-layout;
+        min-height: 160px;
+        align-items: center;
+        flex-wrap: wrap;
+        @include responsividade.dispositivo(p) {
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        @include responsividade.dispositivo(xp) {
+            max-width: 80%;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        .caracteristicas-item {
+            width: 250px;
+            display: flex;
+            height: 60px;
+            align-items: center;
+            gap: 15px;
+            @include layouts-mixins.fonte(variaveis.$branco, 20px, 24px, bold);
+            &:not(:last-child) {
+                border-right: 1px solid variaveis.$branco;
+            }
+            @include responsividade.dispositivo(m) {
+                &:last-child {
+                    border-right: 1px solid variaveis.$branco;
+                }
+            }
+            @include responsividade.dispositivo(p) {
+                &:not(:last-child) {
+                    border-right: 0px;
+                }
+            }
+            @include responsividade.dispositivo(xp) {
+                font-size: 16px;
+                line-height: 19px;
+
+                flex-grow: 1;
+                flex-basis: 40%;
+                img {
+                    border-radius: 50px;
+                    width: 33px;
+                    height: 33px;
+                }
+            }
+        }
+    }
+}

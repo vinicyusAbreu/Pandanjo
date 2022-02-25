@@ -1,0 +1,35 @@
+@use "../1-base/variaveis";
+.container-ponto {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    .ponto {
+        border: none;
+        outline: none;
+        padding: 0;
+        background: transparent linear-gradient(90deg, variaveis.$verde-claro 0%, variaveis.$verde 100%);
+        height: 8px;
+        width: 8px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .ponto-ativo,
+    li.is-selected {
+        width: 25px !important;
+    }
+}
+.flickity-page-dots .dot {
+    background: transparent linear-gradient(90deg, variaveis.$verde-claro 0%, variaveis.$verde 100%) !important;
+    height: 8px !important;
+    width: 8px !important;
+    border-radius: 50px !important;
+    transition: 0.3s ease-in-out;
+    opacity: 1 !important;
+}
+.flickity-page-dots .dot.is-selected {
+    padding-right: 17px !important;
+}
