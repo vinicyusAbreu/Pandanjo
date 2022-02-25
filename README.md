@@ -7,7 +7,7 @@
 
 [![Image from Gyazo](https://i.gyazo.com/6abee8616ab5dd078320215f5d0a9664.png)](https://gyazo.com/6abee8616ab5dd078320215f5d0a9664)
 
-<h4 align="center"><a href="#">Clique para visitar o projeto</a></h4>
+<h4 align="center"><a href="https://vinicyusabreu.github.io/Pandanjo/">Clique para visitar o projeto</a></h4>
 
 ## 📚 Sobre o projeto
 
